@@ -2,10 +2,15 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const siteVersion = process.env.SITE_VERSION || 'dev';
+
 const config: Config = {
   title: 'Groo Docs',
   tagline: 'Developer tools and authentication SDKs',
   favicon: 'img/favicon.svg',
+  customFields: {
+    siteVersion,
+  },
 
   future: {
     v4: true,
@@ -228,7 +233,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Groo. All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} Groo. All rights reserved. v${siteVersion}`,
     },
     prism: {
       theme: prismThemes.github,

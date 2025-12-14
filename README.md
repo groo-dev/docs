@@ -1,41 +1,71 @@
-# Website
+# Groo Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Documentation site for Groo developer tools and authentication SDKs.
 
-## Installation
+**Live site:** [docs.groo.dev](https://docs.groo.dev)
 
-```bash
-yarn
-```
+## Documentation
 
-## Local Development
+| Project | Description |
+|---------|-------------|
+| [Groo CLI](/groo-cli) | Development CLI for managing monorepo services |
+| [record-release](/record-release) | GitHub Action for recording releases |
+| [cl-wrangler](/cl-wrangler) | Multi-account Cloudflare Wrangler |
+| [auth-core](/auth-core) | Core authentication types and utilities |
+| [auth-react](/auth-react) | React hooks and components for authentication |
+| [auth-server](/auth-server) | Server-side authentication for Hono |
 
-```bash
-yarn start
-```
+## Development
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Prerequisites
 
-## Build
+- Node.js 18+
+- npm
 
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+### Install dependencies
 
 ```bash
-USE_SSH=true yarn deploy
+npm install
 ```
 
-Not using SSH:
+### Start development server
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+> Note: Search only works in production builds.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run serve
+```
+
+## Project Structure
+
+```
+docs/
+├── groo-cli/          # Groo CLI documentation
+├── record-release/    # record-release documentation
+├── cl-wrangler/       # cl-wrangler documentation
+├── auth-core/         # auth-core documentation
+├── auth-react/        # auth-react documentation
+├── auth-server/       # auth-server documentation
+├── src/
+│   ├── css/           # Custom styles
+│   └── pages/         # Custom pages (homepage)
+├── static/            # Static assets
+├── sidebars/          # Sidebar configs for each project
+└── docusaurus.config.ts
+```
+
+## License
+
+MIT
