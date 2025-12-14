@@ -49,14 +49,51 @@ const ServerIcon = () => (
   </svg>
 )
 
+const KeyIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4" />
+    <path d="m21 2-9.6 9.6" />
+    <circle cx="7.5" cy="15.5" r="5.5" />
+  </svg>
+)
+
+const HardDriveIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="22" x2="2" y1="12" y2="12" />
+    <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+    <line x1="6" x2="6.01" y1="16" y2="16" />
+    <line x1="10" x2="10.01" y1="16" y2="16" />
+  </svg>
+)
+
 type ProductCard = {
   title: string
   description: string
   link: string
-  version: string
+  version?: string
   icon: React.ReactNode
-  color: 'teal' | 'purple'
+  color: 'teal' | 'purple' | 'blue'
+  external?: boolean
 }
+
+const applications: ProductCard[] = [
+  {
+    title: 'Pass',
+    description: 'Secure password manager. Store, generate, and autofill passwords across all your devices.',
+    link: 'https://pass.groo.dev',
+    icon: <KeyIcon />,
+    color: 'blue',
+    external: true,
+  },
+  {
+    title: 'Drive',
+    description: 'Cloud storage for your files. Sync, share, and access your data from anywhere.',
+    link: 'https://drive.groo.dev',
+    icon: <HardDriveIcon />,
+    color: 'blue',
+    external: true,
+  },
+]
 
 const tools: ProductCard[] = [
   {
@@ -112,17 +149,31 @@ const authSdks: ProductCard[] = [
   },
 ]
 
-function ProductCard({ title, description, link, version, icon, color }: ProductCard) {
-  return (
-    <Link to={link} className={`${styles.card} ${styles[color]}`}>
+function ProductCard({ title, description, link, version, icon, color, external }: ProductCard) {
+  const cardContent = (
+    <>
       <div className={styles.cardIcon}>{icon}</div>
       <div className={styles.cardContent}>
         <div className={styles.cardHeader}>
           <h3>{title}</h3>
-          <span className={styles.version}>v{version}</span>
+          {version && <span className={styles.version}>v{version}</span>}
         </div>
         <p>{description}</p>
       </div>
+    </>
+  )
+
+  if (external) {
+    return (
+      <a href={link} className={`${styles.card} ${styles[color]}`} target="_blank" rel="noopener noreferrer">
+        {cardContent}
+      </a>
+    )
+  }
+
+  return (
+    <Link to={link} className={`${styles.card} ${styles[color]}`}>
+      {cardContent}
     </Link>
   )
 }
@@ -176,6 +227,11 @@ export default function Home(): React.JSX.Element {
 
         <main className={styles.main}>
           <div className={styles.container}>
+            <ProductSection
+              title="Applications"
+              subtitle="End-user applications powered by Groo"
+              products={applications}
+            />
             <ProductSection
               title="Developer Tools"
               subtitle="CLI tools and automation for your development workflow"
