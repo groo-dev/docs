@@ -99,6 +99,15 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'auth',
+        path: 'auth',
+        routeBasePath: 'auth',
+        sidebarPath: './sidebars/auth.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'auth-core',
         path: 'auth-core',
         routeBasePath: 'auth-core',
@@ -188,6 +197,7 @@ const config: Config = {
           label: 'Auth SDKs',
           position: 'left',
           items: [
+            { to: '/auth', label: 'Overview' },
             { to: '/auth-core', label: 'auth-core' },
             { to: '/auth-react', label: 'auth-react' },
             { to: '/auth-server', label: 'auth-server' },
@@ -220,6 +230,7 @@ const config: Config = {
         {
           title: 'Auth SDKs',
           items: [
+            { label: 'Overview', to: '/auth' },
             { label: 'auth-core', to: '/auth-core' },
             { label: 'auth-react', to: '/auth-react' },
             { label: 'auth-server', to: '/auth-server' },
