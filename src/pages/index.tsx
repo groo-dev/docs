@@ -66,13 +66,19 @@ const HardDriveIcon = () => (
   </svg>
 )
 
+const SparklesIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+  </svg>
+)
+
 type ProductCard = {
   title: string
   description: string
   link: string
   version?: string
   icon: React.ReactNode
-  color: 'teal' | 'purple' | 'blue'
+  color: 'teal' | 'purple' | 'blue' | 'orange'
   external?: boolean
 }
 
@@ -95,12 +101,13 @@ const applications: ProductCard[] = [
   },
 ]
 
+
 const tools: ProductCard[] = [
   {
     title: 'Groo CLI',
     description: 'Development CLI for managing monorepo services. Run dev servers, view logs, and manage deployments.',
     link: '/groo-cli',
-    version: '0.0.5',
+    version: '0.0.7',
     icon: <TerminalIcon />,
     color: 'teal',
   },
@@ -116,7 +123,7 @@ const tools: ProductCard[] = [
     title: 'cl-wrangler',
     description: 'Multi-account Cloudflare Wrangler. Switch between accounts without re-authenticating.',
     link: '/cl-wrangler',
-    version: '0.1.16',
+    version: '0.2.1',
     icon: <CloudIcon />,
     color: 'teal',
   },
@@ -127,7 +134,7 @@ const authSdks: ProductCard[] = [
     title: 'auth-core',
     description: 'Core authentication types and utilities shared across auth packages.',
     link: '/auth-core',
-    version: '0.2.1',
+    version: '0.2.2',
     icon: <ShieldIcon />,
     color: 'purple',
   },
@@ -135,7 +142,7 @@ const authSdks: ProductCard[] = [
     title: 'auth-react',
     description: 'React hooks and components for authentication. useAuth, AuthProvider, and more.',
     link: '/auth-react',
-    version: '0.2.2',
+    version: '0.2.3',
     icon: <CodeIcon />,
     color: 'purple',
   },
@@ -143,7 +150,7 @@ const authSdks: ProductCard[] = [
     title: 'auth-server',
     description: 'Server-side authentication for Hono. Session validation and API token support.',
     link: '/auth-server',
-    version: '0.7.3',
+    version: '0.7.4',
     icon: <ServerIcon />,
     color: 'purple',
   },
@@ -202,6 +209,111 @@ function ProductSection({
   )
 }
 
+const codeOpenAI = `import OpenAI from 'openai'
+
+const client = new OpenAI({
+  apiKey: 'your-api-key',
+  baseURL: 'https://ai.groo.dev/v1/projects/{project-id}',
+})
+
+const stream = await client.chat.completions.create({
+  model: 'anthropic/claude-sonnet-4-20250514',
+  messages: [{ role: 'user', content: 'How do I authenticate?' }],
+  stream: true,
+})`
+
+const codeReact = `// Wrap your app with AuthProvider
+// from @groo.dev/auth-react
+import { Chat } from '@groo.dev/ai-react'
+
+function DocsPage() {
+  return (
+    <Chat
+      title="Ask AI"
+      theme="system"
+    />
+  )
+}`
+
+const codeCurl = `curl https://ai.groo.dev/v1/projects/{project-id}/retrieve \\
+  -H "Authorization: Bearer your-api-key" \\
+  -H "Content-Type: application/json" \\
+  -d '{ "query": "authentication setup", "limit": 5 }'`
+
+const codeExamples = [
+  { title: 'chat.ts', code: codeOpenAI, label: 'OpenAI SDK' },
+  { title: 'App.tsx', code: codeReact, label: 'React' },
+  { title: 'Terminal', code: codeCurl, label: 'Retrieve' },
+]
+
+function AISection() {
+  return (
+    <section className={styles.aiSection}>
+      <div className={styles.aiContent}>
+        <div className={styles.aiText}>
+          <div className={styles.aiBadge}>
+            <SparklesIcon />
+            <span>New</span>
+          </div>
+          <h2>Groo AI</h2>
+          <p>
+            Add an AI assistant to your documentation. Index your docs from GitHub,
+            enable semantic search, and let users chat with your content.
+          </p>
+          <ul className={styles.aiFeatures}>
+            <li>
+              <span className={styles.aiCheck}>✓</span>
+              Index from GitHub repositories
+            </li>
+            <li>
+              <span className={styles.aiCheck}>✓</span>
+              Semantic search with vector embeddings
+            </li>
+            <li>
+              <span className={styles.aiCheck}>✓</span>
+              RAG chat with source citations
+            </li>
+            <li>
+              <span className={styles.aiCheck}>✓</span>
+              OpenAI-compatible API
+            </li>
+          </ul>
+          <div className={styles.aiActions}>
+            <Link to="/ai" className={styles.aiPrimaryButton}>
+              Get Started
+            </Link>
+            <Link to="/ai/react-sdk" className={styles.aiSecondaryButton}>
+              View SDK Docs
+            </Link>
+          </div>
+        </div>
+        <div className={styles.aiCodeStack}>
+          {codeExamples.map((example, index) => (
+            <div
+              key={example.label}
+              className={styles.aiCode}
+              style={{ '--card-index': index } as React.CSSProperties}
+            >
+              <div className={styles.aiCodeHeader}>
+                <div className={styles.aiCodeDots}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span className={styles.aiCodeTitle}>{example.title}</span>
+                <span className={styles.aiCodeLabel}>{example.label}</span>
+              </div>
+              <pre className={styles.aiCodeBlock}>
+                <code>{example.code}</code>
+              </pre>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function Home(): React.JSX.Element {
   return (
     <Layout title="Home" description="Developer documentation for Groo tools and SDKs">
@@ -227,6 +339,7 @@ export default function Home(): React.JSX.Element {
 
         <main className={styles.main}>
           <div className={styles.container}>
+            <AISection />
             <ProductSection
               title="Applications"
               subtitle="End-user applications powered by Groo"

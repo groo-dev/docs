@@ -62,7 +62,7 @@ const config: Config = {
         sidebarPath: './sidebars/groo-cli.ts',
         versions: {
           current: {
-            label: '0.0.5',
+            label: '0.0.7',
           },
         },
       },
@@ -90,7 +90,7 @@ const config: Config = {
         sidebarPath: './sidebars/cl-wrangler.ts',
         versions: {
           current: {
-            label: '0.1.16',
+            label: '0.2.1',
           },
         },
       },
@@ -114,7 +114,7 @@ const config: Config = {
         sidebarPath: './sidebars/auth-core.ts',
         versions: {
           current: {
-            label: '0.2.1',
+            label: '0.2.2',
           },
         },
       },
@@ -128,7 +128,7 @@ const config: Config = {
         sidebarPath: './sidebars/auth-react.ts',
         versions: {
           current: {
-            label: '0.2.2',
+            label: '0.2.3',
           },
         },
       },
@@ -142,9 +142,19 @@ const config: Config = {
         sidebarPath: './sidebars/auth-server.ts',
         versions: {
           current: {
-            label: '0.7.3',
+            label: '0.7.4',
           },
         },
+      },
+    ],
+    // AI
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ai',
+        path: 'ai',
+        routeBasePath: 'ai',
+        sidebarPath: './sidebars/ai.ts',
       },
     ],
   ],
@@ -183,6 +193,11 @@ const config: Config = {
       },
       items: [
         {
+          to: '/ai',
+          label: 'Groo AI',
+          position: 'left',
+        },
+        {
           type: 'dropdown',
           label: 'Tools',
           position: 'left',
@@ -220,7 +235,16 @@ const config: Config = {
       },
       links: [
         {
-          title: 'Documentation',
+          title: 'Groo AI',
+          items: [
+            { label: 'Overview', to: '/ai' },
+            { label: 'Getting Started', to: '/ai/getting-started' },
+            { label: 'React SDK', to: '/ai/react-sdk' },
+            { label: 'API Reference', to: '/ai/api-reference' },
+          ],
+        },
+        {
+          title: 'Tools',
           items: [
             { label: 'Groo CLI', to: '/groo-cli' },
             { label: 'record-release', to: '/record-release' },
