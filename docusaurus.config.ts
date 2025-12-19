@@ -193,9 +193,17 @@ const config: Config = {
       },
       items: [
         {
-          to: '/ai',
+          type: 'dropdown',
           label: 'Groo AI',
           position: 'left',
+          items: [
+            { to: '/ai', label: 'Overview' },
+            { to: '/ai/getting-started', label: 'Getting Started' },
+            { to: '/ai/react-sdk', label: 'ai-react' },
+            { to: '/ai/core-sdk', label: 'ai-core' },
+            { to: '/ai/docusaurus-plugin', label: 'ai-docusaurus' },
+            { to: '/ai/api-reference', label: 'API Reference' },
+          ],
         },
         {
           type: 'dropdown',
@@ -239,7 +247,9 @@ const config: Config = {
           items: [
             { label: 'Overview', to: '/ai' },
             { label: 'Getting Started', to: '/ai/getting-started' },
-            { label: 'React SDK', to: '/ai/react-sdk' },
+            { label: 'ai-react', to: '/ai/react-sdk' },
+            { label: 'ai-core', to: '/ai/core-sdk' },
+            { label: 'ai-docusaurus', to: '/ai/docusaurus-plugin' },
             { label: 'API Reference', to: '/ai/api-reference' },
           ],
         },
