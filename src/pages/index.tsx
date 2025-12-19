@@ -142,7 +142,7 @@ const authSdks: ProductCard[] = [
     title: 'auth-react',
     description: 'React hooks and components for authentication. useAuth, AuthProvider, and more.',
     link: '/auth-react',
-    version: '0.2.3',
+    version: '0.2.4',
     icon: <CodeIcon />,
     color: 'purple',
   },
@@ -161,6 +161,7 @@ const aiSdks: ProductCard[] = [
     title: 'ai-react',
     description: 'React components and hooks for AI chat and search. AIProvider, GrooChat, useChat, and more.',
     link: '/ai/react-sdk',
+    version: '0.0.2',
     icon: <CodeIcon />,
     color: 'orange',
   },
@@ -168,6 +169,7 @@ const aiSdks: ProductCard[] = [
     title: 'ai-core',
     description: 'Core SDK for Groo AI. OpenAI-compatible chat client and semantic search.',
     link: '/ai/core-sdk',
+    version: '0.0.2',
     icon: <SparklesIcon />,
     color: 'orange',
   },
@@ -175,6 +177,7 @@ const aiSdks: ProductCard[] = [
     title: 'ai-docusaurus',
     description: 'Docusaurus plugin that adds an AI-powered sidebar with chat and search.',
     link: '/ai/docusaurus-plugin',
+    version: '0.0.1',
     icon: <ServerIcon />,
     color: 'orange',
   },
@@ -277,7 +280,7 @@ function AISection() {
         <div className={styles.aiText}>
           <div className={styles.aiBadge}>
             <SparklesIcon />
-            <span>New</span>
+            <span>v0.0.10</span>
           </div>
           <h2>Groo AI</h2>
           <p>
