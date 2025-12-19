@@ -5,7 +5,15 @@ const sidebars: SidebarsConfig = {
     'index',
     'getting-started',
     'dashboard',
-    'react-sdk',
+    {
+      type: 'category',
+      label: 'SDKs',
+      items: [
+        'react-sdk',
+        'core-sdk',
+        'docusaurus-plugin',
+      ],
+    },
     'api-reference',
   ],
 };

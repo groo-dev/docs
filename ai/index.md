@@ -25,11 +25,19 @@ Your Docs (GitHub) → Index → Vector Database → AI Chat with Sources
 ## Quick Example
 
 ```tsx
-import { Chat } from '@groo.dev/ai-react'
+import { AIProvider, GrooChat } from '@groo.dev/ai-react'
 
-function DocsPage() {
+function App() {
   return (
-    <Chat apiKey="your-api-key" />
+    <AIProvider
+      projectId="your-project-id"
+      auth={{
+        accountsUrl: 'https://accounts.groo.dev',
+        clientId: 'your-client-id',
+      }}
+    >
+      <GrooChat />
+    </AIProvider>
   )
 }
 ```
@@ -58,4 +66,8 @@ Users get responses like:
 1. [Create a project](/ai/getting-started) in the Groo AI dashboard
 2. Connect your GitHub repository
 3. Wait for indexing to complete
-4. [Integrate the React SDK](/ai/react-sdk) or [use the API](/ai/api-reference)
+4. Integrate using one of our SDKs:
+   - [React SDK](/ai/react-sdk) - Components and hooks for React apps
+   - [Docusaurus Plugin](/ai/docusaurus-plugin) - Drop-in sidebar for Docusaurus sites
+   - [Core SDK](/ai/core-sdk) - Low-level client for any JavaScript environment
+   - [REST API](/ai/api-reference) - Direct API access
