@@ -156,6 +156,30 @@ const authSdks: ProductCard[] = [
   },
 ]
 
+const aiSdks: ProductCard[] = [
+  {
+    title: 'ai-react',
+    description: 'React components and hooks for AI chat and search. AIProvider, GrooChat, useChat, and more.',
+    link: '/ai/react-sdk',
+    icon: <CodeIcon />,
+    color: 'orange',
+  },
+  {
+    title: 'ai-core',
+    description: 'Core SDK for Groo AI. OpenAI-compatible chat client and semantic search.',
+    link: '/ai/core-sdk',
+    icon: <SparklesIcon />,
+    color: 'orange',
+  },
+  {
+    title: 'ai-docusaurus',
+    description: 'Docusaurus plugin that adds an AI-powered sidebar with chat and search.',
+    link: '/ai/docusaurus-plugin',
+    icon: <ServerIcon />,
+    color: 'orange',
+  },
+]
+
 function ProductCard({ title, description, link, version, icon, color, external }: ProductCard) {
   const cardContent = (
     <>
@@ -222,16 +246,16 @@ const stream = await client.chat.completions.create({
   stream: true,
 })`
 
-const codeReact = `// Wrap your app with AuthProvider
-// from @groo.dev/auth-react
-import { Chat } from '@groo.dev/ai-react'
+const codeReact = `import { AIProvider, GrooChat } from '@groo.dev/ai-react'
 
-function DocsPage() {
+function App() {
   return (
-    <Chat
-      title="Ask AI"
-      theme="system"
-    />
+    <AIProvider
+      projectId="your-project-id"
+      auth={{ accountsUrl, clientId }}
+    >
+      <GrooChat />
+    </AIProvider>
   )
 }`
 
@@ -354,6 +378,11 @@ export default function Home(): React.JSX.Element {
               title="Authentication SDKs"
               subtitle="Secure, privacy-first auth for your applications"
               products={authSdks}
+            />
+            <ProductSection
+              title="AI SDKs"
+              subtitle="Add AI-powered chat and search to your applications"
+              products={aiSdks}
             />
           </div>
         </main>
