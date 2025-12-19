@@ -365,6 +365,11 @@ export default function Home(): React.JSX.Element {
           <div className={styles.container}>
             <AISection />
             <ProductSection
+              title="AI SDKs"
+              subtitle="Add AI-powered chat and search to your applications"
+              products={aiSdks}
+            />
+            <ProductSection
               title="Applications"
               subtitle="End-user applications powered by Groo"
               products={applications}
@@ -378,11 +383,6 @@ export default function Home(): React.JSX.Element {
               title="Authentication SDKs"
               subtitle="Secure, privacy-first auth for your applications"
               products={authSdks}
-            />
-            <ProductSection
-              title="AI SDKs"
-              subtitle="Add AI-powered chat and search to your applications"
-              products={aiSdks}
             />
           </div>
         </main>
