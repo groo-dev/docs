@@ -1,3 +1,9 @@
+---
+title: Getting Started with auth-server
+description: Set up server-side authentication with Hono. Configure GrooHonoMiddleware, environment variables, and protected routes.
+keywords: [auth-server setup, Hono auth setup, GrooHonoMiddleware, server auth guide]
+---
+
 # Getting Started
 
 Set up authentication on your backend with Hono.

@@ -1,3 +1,9 @@
+---
+title: Getting Started with Groo AI
+description: Set up Groo AI for your documentation in 5 minutes. Connect GitHub, configure indexing, and integrate AI chat into your site.
+keywords: [Groo AI setup, documentation indexing, GitHub integration, AI chat setup]
+---
+
 # Getting Started
 
 Set up Groo AI for your documentation in 5 minutes.

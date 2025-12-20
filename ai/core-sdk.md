@@ -1,3 +1,9 @@
+---
+title: Core SDK - @groo.dev/ai-core
+description: Low-level JavaScript client for Groo AI chat and search APIs. OpenAI-compatible, works in Node.js and browser environments.
+keywords: [AI core SDK, JavaScript AI client, OpenAI compatible, hybrid search API]
+---
+
 # Core SDK
 
 Low-level client library for Groo AI chat and search APIs with `@groo.dev/ai-core`.

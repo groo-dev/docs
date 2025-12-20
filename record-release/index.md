@@ -1,3 +1,9 @@
+---
+title: record-release - GitHub Action for Release Management
+description: Record deployments and releases to Groo Ops Dashboard. Automatic GitHub releases, version bumping, and multi-job workflow support.
+keywords: [GitHub Action, release management, deployment tracking, version control, CI/CD]
+---
+
 # record-release
 
 A GitHub Action to record deployments and releases to Groo Ops Dashboard.

@@ -1,3 +1,9 @@
+---
+title: Groo CLI Configuration
+description: Configure Groo CLI options and port detection for Next.js, Vite, and Wrangler. State directory and global settings.
+keywords: [Groo CLI config, port detection, Next.js port, Vite config, Wrangler config]
+---
+
 # Configuration
 
 ## Global Options

@@ -1,3 +1,9 @@
+---
+title: record-release Workflow Examples
+description: Common workflow patterns for record-release. Basic deploy, staging and production, monorepo, and changelog examples.
+keywords: [workflow examples, deploy patterns, monorepo releases, GitHub Actions examples]
+---
+
 # Examples
 
 Common workflow patterns for record-release.

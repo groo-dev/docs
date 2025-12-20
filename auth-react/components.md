@@ -1,3 +1,9 @@
+---
+title: auth-react Components
+description: Pre-built React authentication components. LoginButton, LogoutButton for auth actions, and RequireAuth for protecting routes.
+keywords: [LoginButton, LogoutButton, RequireAuth, protected routes, React auth components]
+---
+
 # Components
 
 Pre-built React components for authentication.

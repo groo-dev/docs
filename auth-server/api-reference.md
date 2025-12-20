@@ -1,3 +1,9 @@
+---
+title: auth-server API Reference
+description: Complete API reference for auth-server. grooAuth factory, GrooHonoMiddleware, ConsentedUser, ApiToken types, and context variables.
+keywords: [auth-server API, grooAuth, validateSession, createToken, GrooHonoMiddleware]
+---
+
 # API Reference
 
 Complete reference for auth-server exports.

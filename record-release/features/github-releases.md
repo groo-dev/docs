@@ -1,3 +1,9 @@
+---
+title: GitHub Releases with record-release
+description: Automatically create GitHub releases with deployments. Custom release notes, draft releases, prereleases, and monorepo tag prefixes.
+keywords: [GitHub releases, release notes, draft releases, prereleases, monorepo tags]
+---
+
 # GitHub Releases
 
 record-release can automatically create GitHub releases with your deployments.

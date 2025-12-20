@@ -1,3 +1,9 @@
+---
+title: Hono Middleware for Authentication
+description: GrooHonoMiddleware for protecting routes. Required, optional, and API token authentication with session validation.
+keywords: [Hono middleware, route protection, session middleware, apiTokenMiddleware, optionalMiddleware]
+---
+
 # Hono Middleware
 
 Use `GrooHonoMiddleware` to protect routes and validate user authentication.

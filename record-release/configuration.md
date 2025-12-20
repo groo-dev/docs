@@ -1,3 +1,9 @@
+---
+title: record-release Configuration Reference
+description: Complete reference for record-release inputs and outputs. Configure tokens, versions, environments, artifacts, and release options.
+keywords: [record-release config, GitHub Action inputs, release outputs, workflow permissions]
+---
+
 # Configuration
 
 Complete reference for record-release inputs and outputs.

@@ -1,3 +1,9 @@
+---
+title: Installing cl-wrangler
+description: Install cl-wrangler via Homebrew, npm, pip, or from releases. Enable shell completions for Zsh, Bash, and Fish.
+keywords: [cl-wrangler install, Homebrew install, npm install, shell completions]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

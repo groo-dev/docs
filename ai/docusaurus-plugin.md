@@ -1,3 +1,9 @@
+---
+title: Docusaurus Plugin - @groo.dev/ai-docusaurus
+description: Add an AI-powered sidebar to your Docusaurus docs site with search and chat. Drop-in installation with minimal configuration.
+keywords: [Docusaurus plugin, AI sidebar, documentation chat, Docusaurus AI, docs search]
+---
+
 # Docusaurus Plugin
 
 Add an AI-powered sidebar to your Docusaurus documentation site with `@groo.dev/ai-docusaurus`.

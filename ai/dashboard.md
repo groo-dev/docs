@@ -1,3 +1,9 @@
+---
+title: Groo AI Dashboard Guide
+description: Manage AI projects, view indexed files, test search and chat, and configure settings in the Groo AI dashboard.
+keywords: [Groo AI dashboard, project management, documentation indexing, AI configuration]
+---
+
 # Dashboard Guide
 
 The Groo AI dashboard lets you manage projects, view indexed files, and test your AI assistant.

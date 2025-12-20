@@ -1,3 +1,9 @@
+---
+title: React SDK - @groo.dev/ai-react
+description: Add AI chat and search to React apps with components like GrooChat and Search, plus hooks like useChat and useSearch.
+keywords: [React AI SDK, AI chat component, React hooks, useChat, AI search component]
+---
+
 # React SDK
 
 Add AI chat and search to your React application with `@groo.dev/ai-react`.

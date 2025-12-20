@@ -1,3 +1,9 @@
+---
+title: Release Artifacts with record-release
+description: Upload build artifacts to GitHub releases. Support for single job, multi-job workflows, and parallel builds.
+keywords: [release artifacts, GitHub releases, build uploads, parallel builds]
+---
+
 # Release Artifacts
 
 Upload build artifacts to your GitHub releases.

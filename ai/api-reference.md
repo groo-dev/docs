@@ -1,3 +1,9 @@
+---
+title: Groo AI API Reference
+description: OpenAI-compatible REST API for chat completions and hybrid search. Includes authentication, endpoints, error handling, and SDK examples.
+keywords: [Groo AI API, OpenAI compatible API, chat completions, search API, REST API]
+---
+
 # API Reference
 
 Groo AI provides an OpenAI-compatible API for chat and semantic search.

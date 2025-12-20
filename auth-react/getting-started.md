@@ -1,3 +1,9 @@
+---
+title: Getting Started with auth-react
+description: Set up authentication in your React app. Install auth-react, configure AuthProvider, and integrate with Next.js or any React framework.
+keywords: [React auth setup, AuthProvider setup, Next.js authentication, React auth guide]
+---
+
 # Getting Started
 
 Set up authentication in your React application.

@@ -1,3 +1,9 @@
+---
+title: auth-react Hooks
+description: React hooks for authentication state. useAuth provides user data, loading state, and login/logout URLs. useUser for simplified access.
+keywords: [useAuth hook, useUser hook, React auth hooks, authentication state, refetch user]
+---
+
 # Hooks
 
 React hooks for accessing authentication state.

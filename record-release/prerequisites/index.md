@@ -1,3 +1,9 @@
+---
+title: record-release Prerequisites
+description: Set up your application in Groo Ops Dashboard before using record-release. Register your app and create an API token.
+keywords: [record-release setup, Groo Ops setup, prerequisites, API token setup]
+---
+
 # Prerequisites
 
 Before using record-release, you need to set up your application in the Groo Ops Dashboard.

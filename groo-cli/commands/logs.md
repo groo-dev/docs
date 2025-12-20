@@ -1,3 +1,9 @@
+---
+title: groo logs Command
+description: View and follow logs for running services with groo logs. Tail logs with -f flag and control output lines.
+keywords: [groo logs, view service logs, tail logs, log management, dev logs]
+---
+
 # logs
 
 View logs for running services.

@@ -1,3 +1,9 @@
+---
+title: Getting Started with cl-wrangler
+description: Quick start guide for cl-wrangler. Learn how account switching works and set up your first Cloudflare account profiles.
+keywords: [cl quick start, Wrangler account setup, Cloudflare switching, account profiles]
+---
+
 # Getting Started
 
 `cl` is a CLI tool to easily switch between multiple Cloudflare/Wrangler accounts.

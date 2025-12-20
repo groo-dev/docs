@@ -1,3 +1,9 @@
+---
+title: cl-wrangler Configuration
+description: Configure cl-wrangler storage paths, custom Wrangler commands, and understand how account data is stored locally.
+keywords: [cl config, Wrangler config path, account storage, environment variables]
+---
+
 # Configuration
 
 ## Config Location

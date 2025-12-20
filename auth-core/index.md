@@ -1,3 +1,9 @@
+---
+title: auth-core - Core Types and Utilities
+description: Core TypeScript types and AuthClient class for Groo Auth SDK. Shared utilities for React and server authentication packages.
+keywords: [auth-core, TypeScript types, AuthClient, authentication utilities, Groo Auth]
+---
+
 # auth-core
 
 Core types and utilities for the Groo Auth SDK.
