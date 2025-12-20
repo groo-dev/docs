@@ -44,6 +44,21 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    // Groo AI sidebar
+    [
+      '@groo.dev/ai-docusaurus',
+      {
+        projectId: process.env.GROO_AI_PROJECT_ID,
+        apiUrl: process.env.GROO_AI_API_URL,
+        auth: {
+          accountsUrl: process.env.GROO_ACCOUNTS_BASE_URL,
+          clientId: process.env.GROO_AI_CLIENT_ID,
+        },
+      },
+    ],
+  ],
+
   plugins: [
     // Local search
     [

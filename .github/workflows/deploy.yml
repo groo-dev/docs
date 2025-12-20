@@ -38,6 +38,10 @@ jobs:
         run: npm run build
         env:
           SITE_VERSION: ${{ steps.release.outputs.version }}
+          GROO_AI_PROJECT_ID: ${{ vars.GROO_AI_PROJECT_ID }}
+          GROO_AI_CLIENT_ID: ${{ vars.GROO_AI_CLIENT_ID }}
+          GROO_ACCOUNTS_BASE_URL: ${{ vars.GROO_ACCOUNTS_BASE_URL }}
+          GROO_AI_API_URL: ${{ vars.GROO_AI_API_URL }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
