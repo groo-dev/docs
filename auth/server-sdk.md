@@ -14,6 +14,7 @@ Server-side SDK for handling authentication with Hono and Cloudflare Workers.
 - `GrooHonoMiddleware` - Hono middleware for session validation
 - `grooAuth` - Core authentication client
 - Session-based authentication for users
+- Personal Access Token (PAT) authentication
 - API token authentication for M2M
 - User data management
 
@@ -149,10 +150,14 @@ app.get('/v1/me', hono.middleware, (c) => {
 ```
 
 **Behavior:**
-- Reads session cookie
-- Validates session with accounts service
+- Reads session cookie (supports both session IDs and PAT tokens)
+- Validates with accounts service
 - Returns 401 if invalid or missing
 - Sets `c.get('user')` to ConsentedUser
+
+:::tip Personal Access Tokens
+The middleware automatically supports [Personal Access Tokens](/auth/personal-access-tokens). Users can create PATs in their account settings and use them in place of session cookies. PAT tokens start with `groo_pat_`.
+:::
 
 ### optionalMiddleware - Optional Authentication
 
@@ -183,15 +188,20 @@ app.post('/v1/webhook', hono.apiTokenMiddleware, (c) => {
 
 Machine-to-machine (M2M) authentication for services like GitHub Actions, cron jobs, and webhooks.
 
-### When to Use API Tokens
+### When to Use Each Auth Method
 
 | Use Case | Auth Method |
 |----------|-------------|
 | Browser/frontend users | User session (`hono.middleware`) |
-| GitHub Actions, CI/CD | API tokens (`hono.apiTokenMiddleware`) |
-| Cron jobs, scheduled tasks | API tokens |
-| Webhooks from external services | API tokens |
-| Service-to-service calls | API tokens |
+| User scripts & automation | PAT via session cookie (`hono.middleware`) |
+| GitHub Actions as user | PAT via session cookie (`hono.middleware`) |
+| Application webhooks | API tokens (`hono.apiTokenMiddleware`) |
+| Service-to-service calls | API tokens (`hono.apiTokenMiddleware`) |
+| Recording deployments | API tokens (`hono.apiTokenMiddleware`) |
+
+**PAT vs API Tokens:**
+- **PAT** - Acts as the user, user's permissions, created in Account Settings
+- **API Token** - Acts as the application, app-level permissions, created per application
 
 ### Creating API Tokens
 

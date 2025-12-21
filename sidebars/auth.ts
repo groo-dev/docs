@@ -6,6 +6,7 @@ const sidebars: SidebarsConfig = {
     'core-sdk',
     'react-sdk',
     'server-sdk',
+    'personal-access-tokens',
     'api-reference',
   ],
 };
