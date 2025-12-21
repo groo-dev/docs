@@ -40,4 +40,4 @@ Before using this action, you need:
 1. A registered application in the Groo Ops Dashboard
 2. An API token with write permissions
 
-See [Prerequisites](/record-release/prerequisites) for setup instructions.
+See [Prerequisites](./prerequisites) for setup instructions.

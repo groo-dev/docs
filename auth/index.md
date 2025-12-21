@@ -15,9 +15,9 @@ Groo Auth is a collection of packages that work together to provide secure, seam
 
 | Package | Purpose |
 |---------|---------|
-| [auth-core](/auth-core) | Shared types, utilities, and token handling |
-| [auth-react](/auth-react) | React hooks and components (`useAuth`, `AuthProvider`) |
-| [auth-server](/auth-server) | Server-side middleware for Hono |
+| [auth-core](./core-sdk) | Shared types, utilities, and token handling |
+| [auth-react](./react-sdk) | React hooks and components (`useAuth`, `AuthProvider`) |
+| [auth-server](./server-sdk) | Server-side middleware for Hono |
 
 ## Architecture
 
@@ -120,6 +120,7 @@ function Dashboard() {
 
 ## Next Steps
 
-- [auth-core documentation](/auth-core) - Types and utilities
-- [auth-react documentation](/auth-react) - React integration
-- [auth-server documentation](/auth-server) - Server middleware
+- [Core SDK](./core-sdk) - Types and utilities
+- [React SDK](./react-sdk) - React integration
+- [Server SDK](./server-sdk) - Server middleware
+- [API Reference](./api-reference) - Complete API reference
