@@ -1,5 +1,6 @@
 ---
 title: Groo AI - AI Assistant for Documentation
+sidebar_label: Overview
 description: Add an AI-powered chat assistant to your documentation. Hybrid search, RAG chat with citations, React SDK, and OpenAI-compatible API.
 keywords: [AI documentation, RAG chat, hybrid search, documentation assistant, AI SDK]
 ---
