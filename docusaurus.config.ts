@@ -120,48 +120,6 @@ const config: Config = {
         sidebarPath: './sidebars/auth.ts',
       },
     ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'auth-core',
-        path: 'auth-core',
-        routeBasePath: 'auth-core',
-        sidebarPath: './sidebars/auth-core.ts',
-        versions: {
-          current: {
-            label: '0.2.2',
-          },
-        },
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'auth-react',
-        path: 'auth-react',
-        routeBasePath: 'auth-react',
-        sidebarPath: './sidebars/auth-react.ts',
-        versions: {
-          current: {
-            label: '0.2.3',
-          },
-        },
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'auth-server',
-        path: 'auth-server',
-        routeBasePath: 'auth-server',
-        sidebarPath: './sidebars/auth-server.ts',
-        versions: {
-          current: {
-            label: '0.7.4',
-          },
-        },
-      },
-    ],
     // AI
     [
       '@docusaurus/plugin-content-docs',
@@ -236,9 +194,9 @@ const config: Config = {
           position: 'left',
           items: [
             { to: '/auth', label: 'Overview' },
-            { to: '/auth-core', label: 'auth-core' },
-            { to: '/auth-react', label: 'auth-react' },
-            { to: '/auth-server', label: 'auth-server' },
+            { to: '/auth/core-sdk', label: 'auth-core' },
+            { to: '/auth/react-sdk', label: 'auth-react' },
+            { to: '/auth/server-sdk', label: 'auth-server' },
           ],
         },
         {
@@ -280,9 +238,9 @@ const config: Config = {
           title: 'Auth SDKs',
           items: [
             { label: 'Overview', to: '/auth' },
-            { label: 'auth-core', to: '/auth-core' },
-            { label: 'auth-react', to: '/auth-react' },
-            { label: 'auth-server', to: '/auth-server' },
+            { label: 'auth-core', to: '/auth/core-sdk' },
+            { label: 'auth-react', to: '/auth/react-sdk' },
+            { label: 'auth-server', to: '/auth/server-sdk' },
           ],
         },
         {

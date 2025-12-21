@@ -4,17 +4,8 @@ const sidebars: SidebarsConfig = {
   sidebar: [
     'index',
     'installation',
-    {
-      type: 'category',
-      label: 'Commands',
-      items: [
-        'commands/dev',
-        'commands/logs',
-        'commands/status',
-        'commands/other',
-      ],
-    },
     'configuration',
+    'commands',
   ],
 };
 

@@ -133,7 +133,7 @@ const authSdks: ProductCard[] = [
   {
     title: 'auth-core',
     description: 'Core authentication types and utilities shared across auth packages.',
-    link: '/auth-core',
+    link: '/auth/core-sdk',
     version: '0.2.2',
     icon: <ShieldIcon />,
     color: 'purple',
@@ -141,7 +141,7 @@ const authSdks: ProductCard[] = [
   {
     title: 'auth-react',
     description: 'React hooks and components for authentication. useAuth, AuthProvider, and more.',
-    link: '/auth-react',
+    link: '/auth/react-sdk',
     version: '0.2.4',
     icon: <CodeIcon />,
     color: 'purple',
@@ -149,7 +149,7 @@ const authSdks: ProductCard[] = [
   {
     title: 'auth-server',
     description: 'Server-side authentication for Hono. Session validation and API token support.',
-    link: '/auth-server',
+    link: '/auth/server-sdk',
     version: '0.7.4',
     icon: <ServerIcon />,
     color: 'purple',
