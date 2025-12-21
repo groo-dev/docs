@@ -1,5 +1,6 @@
 ---
 title: Getting Started with cl-wrangler
+sidebar_label: Getting Started
 description: Quick start guide for cl-wrangler. Learn how account switching works and set up your first Cloudflare account profiles.
 keywords: [cl quick start, Wrangler account setup, Cloudflare switching, account profiles]
 ---

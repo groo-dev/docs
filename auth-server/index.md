@@ -1,5 +1,6 @@
 ---
 title: auth-server - Server-Side Authentication SDK
+sidebar_label: Overview
 description: Server-side authentication for Hono and Cloudflare Workers. Session validation middleware, API token auth, and user data management.
 keywords: [Hono middleware, server authentication, Cloudflare Workers auth, session validation, API tokens]
 ---

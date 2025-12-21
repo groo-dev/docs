@@ -1,5 +1,6 @@
 ---
 title: auth-core API Reference
+sidebar_label: API Reference
 description: AuthClient API documentation with methods for session validation, login URL generation, and logout handling.
 keywords: [AuthClient API, validateSession, getLoginUrl, auth API reference]
 ---

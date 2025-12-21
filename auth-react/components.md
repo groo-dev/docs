@@ -1,5 +1,6 @@
 ---
 title: auth-react Components
+sidebar_label: Components
 description: Pre-built React authentication components. LoginButton, LogoutButton for auth actions, and RequireAuth for protecting routes.
 keywords: [LoginButton, LogoutButton, RequireAuth, protected routes, React auth components]
 ---

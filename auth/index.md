@@ -1,5 +1,6 @@
 ---
 title: Groo Auth - Privacy-First Authentication
+sidebar_label: Overview
 description: Secure authentication system for modern apps. React hooks, Hono middleware, and shared utilities for client and server authentication.
 keywords: [authentication SDK, React auth, Hono middleware, auth provider, user authentication]
 ---

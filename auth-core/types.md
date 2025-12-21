@@ -1,5 +1,6 @@
 ---
 title: auth-core Types
+sidebar_label: Types
 description: TypeScript type definitions for Groo Auth SDK including User, ConsentedUser, AuthConfig, and UseAuthReturn interfaces.
 keywords: [TypeScript types, User interface, AuthConfig, auth types, type definitions]
 ---

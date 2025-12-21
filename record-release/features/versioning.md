@@ -1,5 +1,6 @@
 ---
 title: Semantic Versioning with record-release
+sidebar_label: Versioning
 description: Semantic version bumping and explicit version specification. Bump major, minor, or patch versions automatically.
 keywords: [semantic versioning, version bumping, major minor patch, version management]
 ---

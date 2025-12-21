@@ -1,5 +1,6 @@
 ---
 title: Installing Groo CLI
+sidebar_label: Installation
 description: Install Groo CLI via Homebrew or from source. Quick setup for managing monorepo dev servers.
 keywords: [Groo CLI install, Homebrew install, Rust CLI, dev server tool]
 ---

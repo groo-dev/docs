@@ -1,5 +1,6 @@
 ---
 title: Single Job Workflow with record-release
+sidebar_label: Single Job
 description: The simplest way to use record-release. Automatic release recording after successful deployment in a single GitHub Actions job.
 keywords: [single job workflow, GitHub Actions deploy, automatic release, simple workflow]
 ---

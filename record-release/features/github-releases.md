@@ -1,5 +1,6 @@
 ---
 title: GitHub Releases with record-release
+sidebar_label: GitHub Releases
 description: Automatically create GitHub releases with deployments. Custom release notes, draft releases, prereleases, and monorepo tag prefixes.
 keywords: [GitHub releases, release notes, draft releases, prereleases, monorepo tags]
 ---

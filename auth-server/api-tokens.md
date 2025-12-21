@@ -1,5 +1,6 @@
 ---
 title: API Tokens for Machine-to-Machine Auth
+sidebar_label: API Tokens
 description: M2M authentication for GitHub Actions, cron jobs, and webhooks. Create, manage, and validate API tokens for service authentication.
 keywords: [API tokens, M2M auth, GitHub Actions auth, webhook authentication, service tokens]
 ---

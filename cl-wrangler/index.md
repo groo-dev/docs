@@ -1,5 +1,6 @@
 ---
 title: cl-wrangler - Cloudflare Account Switcher
+sidebar_label: Overview
 description: Switch between multiple Cloudflare/Wrangler accounts instantly. Save, switch, and auto-update authentication configs with cl.
 keywords: [cl-wrangler, Cloudflare accounts, Wrangler switch, account manager, Cloudflare CLI]
 ---

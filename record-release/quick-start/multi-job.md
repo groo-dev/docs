@@ -1,5 +1,6 @@
 ---
 title: Multi-Job Workflow with record-release
+sidebar_label: Multi-Job
 description: Build and deploy with separate jobs using record-release. Session and artifacts are automatically transferred between jobs.
 keywords: [multi-job workflow, build deploy workflow, job artifacts, workflow orchestration]
 ---

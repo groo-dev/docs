@@ -1,5 +1,6 @@
 ---
 title: Register Your Application in Groo Ops
+sidebar_label: Register App
 description: Register your application in Groo Ops Dashboard to track deployments. Set up initial versions and prepare for release tracking.
 keywords: [register app, Groo Ops Dashboard, deployment tracking, application setup]
 ---

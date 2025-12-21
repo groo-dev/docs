@@ -1,5 +1,6 @@
 ---
 title: groo status Command
+sidebar_label: status
 description: Show status of running services with groo status. View PIDs, ports, and running state for all services.
 keywords: [groo status, service status, running services, PID, port status]
 ---

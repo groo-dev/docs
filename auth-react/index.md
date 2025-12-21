@@ -1,5 +1,6 @@
 ---
 title: auth-react - React Authentication SDK
+sidebar_label: Overview
 description: React components and hooks for authentication. AuthProvider, useAuth hook, LoginButton, LogoutButton, and RequireAuth components.
 keywords: [React authentication, useAuth hook, AuthProvider, React auth components, login button]
 ---

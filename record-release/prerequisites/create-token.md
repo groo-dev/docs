@@ -1,5 +1,6 @@
 ---
 title: Create an API Token for record-release
+sidebar_label: Create Token
 description: Create an API token to authenticate record-release with Groo Ops Dashboard. Add the token to GitHub secrets for secure access.
 keywords: [API token, GitHub secrets, Groo Ops authentication, record-release token]
 ---

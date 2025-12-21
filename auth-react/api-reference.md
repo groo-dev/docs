@@ -1,5 +1,6 @@
 ---
 title: auth-react API Reference
+sidebar_label: API Reference
 description: Complete API reference for auth-react exports including AuthProvider, useAuth, useUser, LoginButton, LogoutButton, and RequireAuth.
 keywords: [auth-react API, AuthProvider props, useAuth return type, component props]
 ---

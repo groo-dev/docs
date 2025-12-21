@@ -1,5 +1,6 @@
 ---
 title: cl-wrangler Usage Guide
+sidebar_label: Usage
 description: Use cl switch for one-stop account management. Fuzzy matching, interactive menus, and all cl commands explained.
 keywords: [cl switch, cl add, cl list, fuzzy matching, account commands]
 ---

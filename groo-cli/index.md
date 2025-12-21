@@ -1,5 +1,6 @@
 ---
 title: Groo CLI - Dev Server Manager for Monorepos
+sidebar_label: Overview
 description: Command-line tool for managing dev servers in monorepos. Service discovery, interactive selection, parallel execution, and log management.
 keywords: [Groo CLI, monorepo dev servers, service discovery, parallel execution, dev tool]
 ---

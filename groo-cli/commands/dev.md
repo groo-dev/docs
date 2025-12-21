@@ -1,5 +1,6 @@
 ---
 title: groo dev Command
+sidebar_label: dev
 description: Start dev servers interactively with groo dev. Discover services, select which to run, and get color-coded parallel output.
 keywords: [groo dev, start dev servers, interactive selection, monorepo dev command]
 ---

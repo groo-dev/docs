@@ -1,5 +1,6 @@
 ---
 title: record-release Configuration Reference
+sidebar_label: Configuration
 description: Complete reference for record-release inputs and outputs. Configure tokens, versions, environments, artifacts, and release options.
 keywords: [record-release config, GitHub Action inputs, release outputs, workflow permissions]
 ---
