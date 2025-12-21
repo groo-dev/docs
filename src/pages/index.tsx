@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './index.module.css'
 
 // Icons as components
@@ -102,86 +103,94 @@ const applications: ProductCard[] = [
 ]
 
 
-const tools: ProductCard[] = [
-  {
-    title: 'Groo CLI',
-    description: 'Development CLI for managing monorepo services. Run dev servers, view logs, and manage deployments.',
-    link: '/groo-cli',
-    version: '0.0.7',
-    icon: <TerminalIcon />,
-    color: 'teal',
-  },
-  {
-    title: 'record-release',
-    description: 'GitHub Action for recording releases. Track versions and manage deployments automatically.',
-    link: '/record-release',
-    version: '1.0.5',
-    icon: <RocketIcon />,
-    color: 'teal',
-  },
-  {
-    title: 'cl-wrangler',
-    description: 'Multi-account Cloudflare Wrangler. Switch between accounts without re-authenticating.',
-    link: '/cl-wrangler',
-    version: '0.2.1',
-    icon: <CloudIcon />,
-    color: 'teal',
-  },
-]
+type Versions = Record<string, string>
 
-const authSdks: ProductCard[] = [
-  {
-    title: 'auth-core',
-    description: 'Core authentication types and utilities shared across auth packages.',
-    link: '/auth/core-sdk',
-    version: '0.2.2',
-    icon: <ShieldIcon />,
-    color: 'purple',
-  },
-  {
-    title: 'auth-react',
-    description: 'React hooks and components for authentication. useAuth, AuthProvider, and more.',
-    link: '/auth/react-sdk',
-    version: '0.2.4',
-    icon: <CodeIcon />,
-    color: 'purple',
-  },
-  {
-    title: 'auth-server',
-    description: 'Server-side authentication for Hono. Session validation and API token support.',
-    link: '/auth/server-sdk',
-    version: '0.7.4',
-    icon: <ServerIcon />,
-    color: 'purple',
-  },
-]
+function getTools(versions: Versions): ProductCard[] {
+  return [
+    {
+      title: 'Groo CLI',
+      description: 'Development CLI for managing monorepo services. Run dev servers, view logs, and manage deployments.',
+      link: '/groo-cli',
+      version: versions['groo-cli'],
+      icon: <TerminalIcon />,
+      color: 'teal',
+    },
+    {
+      title: 'record-release',
+      description: 'GitHub Action for recording releases. Track versions and manage deployments automatically.',
+      link: '/record-release',
+      version: versions['record-release'],
+      icon: <RocketIcon />,
+      color: 'teal',
+    },
+    {
+      title: 'cl-wrangler',
+      description: 'Multi-account Cloudflare Wrangler. Switch between accounts without re-authenticating.',
+      link: '/cl-wrangler',
+      version: versions['cl-wrangler'],
+      icon: <CloudIcon />,
+      color: 'teal',
+    },
+  ]
+}
 
-const aiSdks: ProductCard[] = [
-  {
-    title: 'ai-react',
-    description: 'React components and hooks for AI chat and search. AIProvider, GrooChat, useChat, and more.',
-    link: '/ai/react-sdk',
-    version: '0.0.4',
-    icon: <CodeIcon />,
-    color: 'orange',
-  },
-  {
-    title: 'ai-core',
-    description: 'Core SDK for Groo AI. OpenAI-compatible chat client and semantic search.',
-    link: '/ai/core-sdk',
-    version: '0.0.3',
-    icon: <SparklesIcon />,
-    color: 'orange',
-  },
-  {
-    title: 'ai-docusaurus',
-    description: 'Docusaurus plugin that adds an AI-powered sidebar with chat and search.',
-    link: '/ai/docusaurus-plugin',
-    version: '0.0.5',
-    icon: <ServerIcon />,
-    color: 'orange',
-  },
-]
+function getAuthSdks(versions: Versions): ProductCard[] {
+  return [
+    {
+      title: 'auth-core',
+      description: 'Core authentication types and utilities shared across auth packages.',
+      link: '/auth/core-sdk',
+      version: versions['auth-core'],
+      icon: <ShieldIcon />,
+      color: 'purple',
+    },
+    {
+      title: 'auth-react',
+      description: 'React hooks and components for authentication. useAuth, AuthProvider, and more.',
+      link: '/auth/react-sdk',
+      version: versions['auth-react'],
+      icon: <CodeIcon />,
+      color: 'purple',
+    },
+    {
+      title: 'auth-server',
+      description: 'Server-side authentication for Hono. Session validation and API token support.',
+      link: '/auth/server-sdk',
+      version: versions['auth-server'],
+      icon: <ServerIcon />,
+      color: 'purple',
+    },
+  ]
+}
+
+function getAiSdks(versions: Versions): ProductCard[] {
+  return [
+    {
+      title: 'ai-react',
+      description: 'React components and hooks for AI chat and search. AIProvider, GrooChat, useChat, and more.',
+      link: '/ai/react-sdk',
+      version: versions['ai-react'],
+      icon: <CodeIcon />,
+      color: 'orange',
+    },
+    {
+      title: 'ai-core',
+      description: 'Core SDK for Groo AI. OpenAI-compatible chat client and semantic search.',
+      link: '/ai/core-sdk',
+      version: versions['ai-core'],
+      icon: <SparklesIcon />,
+      color: 'orange',
+    },
+    {
+      title: 'ai-docusaurus',
+      description: 'Docusaurus plugin that adds an AI-powered sidebar with chat and search.',
+      link: '/ai/docusaurus-plugin',
+      version: versions['ai-docusaurus'],
+      icon: <ServerIcon />,
+      color: 'orange',
+    },
+  ]
+}
 
 function ProductCard({ title, description, link, version, icon, color, external }: ProductCard) {
   const cardContent = (
@@ -273,14 +282,14 @@ const codeExamples = [
   { title: 'Terminal', code: codeCurl, label: 'Retrieve' },
 ]
 
-function AISection() {
+function AISection({ versions }: { versions: Versions }) {
   return (
     <section className={styles.aiSection}>
       <div className={styles.aiContent}>
         <div className={styles.aiText}>
           <div className={styles.aiBadge}>
             <SparklesIcon />
-            <span>v0.0.13</span>
+            <span>v{versions['ai-api']}</span>
           </div>
           <h2>Groo AI</h2>
           <p>
@@ -342,6 +351,9 @@ function AISection() {
 }
 
 export default function Home(): React.JSX.Element {
+  const { siteConfig } = useDocusaurusContext()
+  const versions = (siteConfig.customFields?.versions ?? {}) as Versions
+
   return (
     <Layout title="Home" description="Developer documentation for Groo tools and SDKs">
       <div className={styles.wrapper}>
@@ -366,11 +378,11 @@ export default function Home(): React.JSX.Element {
 
         <main className={styles.main}>
           <div className={styles.container}>
-            <AISection />
+            <AISection versions={versions} />
             <ProductSection
               title="AI SDKs"
               subtitle="Add AI-powered chat and search to your applications"
-              products={aiSdks}
+              products={getAiSdks(versions)}
             />
             <ProductSection
               title="Applications"
@@ -380,12 +392,12 @@ export default function Home(): React.JSX.Element {
             <ProductSection
               title="Developer Tools"
               subtitle="CLI tools and automation for your development workflow"
-              products={tools}
+              products={getTools(versions)}
             />
             <ProductSection
               title="Authentication SDKs"
               subtitle="Secure, privacy-first auth for your applications"
-              products={authSdks}
+              products={getAuthSdks(versions)}
             />
           </div>
         </main>

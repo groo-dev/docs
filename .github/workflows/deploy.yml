@@ -37,6 +37,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          GROO_PAT: ${{ secrets.GROO_PAT }}
           SITE_VERSION: ${{ steps.release.outputs.version }}
           GROO_AI_PROJECT_ID: ${{ vars.GROO_AI_PROJECT_ID }}
           GROO_AI_CLIENT_ID: ${{ vars.GROO_AI_CLIENT_ID }}
