@@ -109,6 +109,19 @@ const client = new AuthClient({
 
 ### Methods
 
+#### getUser
+
+Fetch the current user, forwarding a cookie for server-side usage or relying on the browser's own credentialed cookie when called client-side:
+
+```typescript
+const user = await client.getUser(cookie?)
+// Returns: User | null
+```
+
+Called in a browser, this issues a credentialed cross-origin `GET /v1/auth/me` (`credentials: 'include'`). The accounts API only grants that request CORS access from an origin registered as a redirect URI on one of the workspace's applications — an unregistered origin gets no `Access-Control-Allow-Origin` header, and the browser blocks the response before your code ever sees it. `PATCH /v1/auth/me` (profile updates) is not exposed cross-origin at all; only `GET` is.
+
+`getUser` catches its own request failure and returns `null` rather than throwing. This means a consumer calling it from an origin that isn't registered sees the same `null` result as a genuinely signed-out user — there is no error to distinguish "not authenticated" from "not allowed to ask." If `getUser()` unexpectedly always returns `null` for a signed-in user, check that the calling origin is registered as a redirect URI before assuming the session itself is the problem.
+
 #### validateSession
 
 Validate a session cookie and return the user:
