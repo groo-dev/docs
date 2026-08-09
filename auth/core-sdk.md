@@ -114,7 +114,7 @@ const client = new AuthClient({
 Fetch the current user, forwarding a cookie for server-side usage or relying on the browser's own credentialed cookie when called client-side:
 
 ```typescript
-const user = await client.getUser(cookie?)
+const user = await client.getUser(cookie)
 // Returns: User | null
 ```
 
